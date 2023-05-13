@@ -1,0 +1,15 @@
+C:\Users\JAIMZ\source\repos\DECAGON_PROJECTS\WeekOne\obj\Debug\net6.0\WeekOne.csproj.AssemblyReference.cache
+C:\Users\JAIMZ\source\repos\DECAGON_PROJECTS\WeekOne\obj\Debug\net6.0\WeekOne.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JAIMZ\source\repos\DECAGON_PROJECTS\WeekOne\obj\Debug\net6.0\WeekOne.AssemblyInfoInputs.cache
+C:\Users\JAIMZ\source\repos\DECAGON_PROJECTS\WeekOne\obj\Debug\net6.0\WeekOne.AssemblyInfo.cs
+C:\Users\JAIMZ\source\repos\DECAGON_PROJECTS\WeekOne\obj\Debug\net6.0\WeekOne.csproj.CoreCompileInputs.cache
+C:\Users\JAIMZ\source\repos\DECAGON_PROJECTS\WeekOne\bin\Debug\net6.0\WeekOne.exe
+C:\Users\JAIMZ\source\repos\DECAGON_PROJECTS\WeekOne\bin\Debug\net6.0\WeekOne.deps.json
+C:\Users\JAIMZ\source\repos\DECAGON_PROJECTS\WeekOne\bin\Debug\net6.0\WeekOne.runtimeconfig.json
+C:\Users\JAIMZ\source\repos\DECAGON_PROJECTS\WeekOne\bin\Debug\net6.0\WeekOne.dll
+C:\Users\JAIMZ\source\repos\DECAGON_PROJECTS\WeekOne\bin\Debug\net6.0\WeekOne.pdb
+C:\Users\JAIMZ\source\repos\DECAGON_PROJECTS\WeekOne\obj\Debug\net6.0\WeekOne.dll
+C:\Users\JAIMZ\source\repos\DECAGON_PROJECTS\WeekOne\obj\Debug\net6.0\refint\WeekOne.dll
+C:\Users\JAIMZ\source\repos\DECAGON_PROJECTS\WeekOne\obj\Debug\net6.0\WeekOne.pdb
+C:\Users\JAIMZ\source\repos\DECAGON_PROJECTS\WeekOne\obj\Debug\net6.0\WeekOne.genruntimeconfig.cache
+C:\Users\JAIMZ\source\repos\DECAGON_PROJECTS\WeekOne\obj\Debug\net6.0\ref\WeekOne.dll
