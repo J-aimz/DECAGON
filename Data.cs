@@ -11,12 +11,12 @@ namespace WeekOne
 {
     public enum Grading
     {
-        F, 
-        E,
-        D,
-        C,
-        B,
-        A
+        F = 0, 
+        E = 1,
+        D = 2,
+        C = 3,
+        B = 4,
+        A = 5
     }
 
     public class Data
@@ -28,6 +28,7 @@ namespace WeekOne
         public byte gradeUnit;
         public char grade;
         public string remark;
+        private string[] grading;
 
         public Data(ArrayList entries)
         {
@@ -35,10 +36,11 @@ namespace WeekOne
             this.courseCode = Convert.ToString(entries[0]);
             this.courseUnit = Convert.ToByte(entries[1]);
             this.courseScore = Convert.ToByte(entries[2]);
-            this.gradeUnit = GetGrade(courseScore);
+            this.grading = GetGrade(courseScore);
+            this.gradeUnit = Convert.ToByte(grading[2]);
+            this.grade = Convert.ToChar(grading[1]);
+            this.remark = grading[0];
             this.weightPoint = GetWeightedPoint(this.courseUnit, this.gradeUnit);
-            this.grade = (char)(Grading)gradeUnit;
-
 
         }
 
@@ -47,30 +49,33 @@ namespace WeekOne
             return  courseUnit * gradeUnit;
         }
 
-        public byte GetGrade(byte courseScore)
+        public string[] GetGrade(byte courseScore)
         {
+            string[] result;
+
             switch (courseScore)
             {
                 case byte score when (score is > 0 and < 40):
-                    this.remark = "Fail";
-                    return 0;
+                    result = new string[3] { "Fail", "F", "0" };
+                    return result;
                 case byte score when (score is > 39 and < 45):
-                    this.remark = "Pass";
-                    return 1;
+                    result = new string[3] { "Pass", "E", "1" };
+                    return result;
                 case byte score when (score is > 44 and < 50):
-                    this.remark = "Fair";
-                    return 2;
+                    result = new string[3] { "Fair", "D", "2" };
+                    return result;
                 case byte score when (score is > 49 and < 60):
-                    this.remark = "Good";
-                    return 3;
+                    result = new string[3] { "Good", "C", "3" };
+                    return result;
                 case byte score when (score is > 59 and < 70):
-                    this.remark = "Very Good";
-                    return 4;
+                    result = new string[3] { "Very Good", "B", "4" };
+                    return result;
                 case byte score when (score is > 69 and < 100):
-                    this.remark = "Excellent";
-                    return 5;
+                    result = new string[3] { "Excellent", "A", "5" };
+                    return result;
                 default:
-                    return 0;
+                    result = new string[3];
+                    return result;
 
             }
         }

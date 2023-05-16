@@ -8,12 +8,9 @@ namespace WeekOne
 {
     internal class CGPA
     {
-        public int totalCostUnitRegister;
+        
 
-        public CGPA()
-        {
-            this.totalCostUnitRegister = 0;
-        }
+      
 
         public decimal CalculateCGPA(decimal totalWeightedPoints, decimal totalCourseUnit)
         {
@@ -21,9 +18,17 @@ namespace WeekOne
             return Math.Round(result, 2);
         }
 
-        public void TotalCostUnitRegister(int score)
+        public int TotalCostUnitPassed(Data[] data)
         {
-            this.totalCostUnitRegister += score;
+            int result = 0;
+            foreach (var items in data)
+            {
+                if (items.grade != 'F')
+                {
+                    result += items.courseUnit;
+                }
+            }
+            return result;
         }
 
     }

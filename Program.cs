@@ -40,7 +40,7 @@ namespace WeekOne
             result.Add("gpa", 0);
             result.Add("totalCourseUnit", 0);
             result.Add("totalWeightPoints", 0);
-            result.Add("totalCourseUnitRegistered", 0);
+            result.Add("totalCourseUnitPassed", 0);
 
             var gpa = new CGPA();
             //aggregate of weighted points and course unit
@@ -56,21 +56,49 @@ namespace WeekOne
 
             //calculate gpa
             result["gpa"] = gpa.CalculateCGPA(totalWeightedPoints: result["totalWeightPoints"], totalCourseUnit: result["totalCourseUnit"]);
+            result["totalCourseUnitPassed"] = gpa.TotalCostUnitPassed(sentData);
 
             return result;
         }
+        
         //method receives data for each course
         public static ArrayList GetCourseData()
         {
             Console.Clear();
-            var prompt = new string[3] { "Input Course Code: ", "Input Course Unit", "Input Course Score" };
+            var prompt = new string[3] { "Input Course Code: ", "Input Course Unit: ", "Input Course Score: " };
             var allInput = new ArrayList();
-            //var allInput = new string[3];
 
             for (int i = 0; i < prompt.Length; i++)
             {
-                Console.WriteLine(prompt[i]);
-                string input = Console.ReadLine();
+                bool inputIsValid = false;
+                string input = null;
+                //without the chks
+                //Console.WriteLine(prompt[i]);
+                //input = Console.ReadLine();
+
+
+                //do
+                //{
+                //} while (inputIsValid);
+
+                jumpBack: 
+                    Console.WriteLine(prompt[i]);
+                    input = Console.ReadLine();
+                    int unit = 0;
+                    int score = 0;
+
+                    if (i == 0 && (string.IsNullOrEmpty(input) || string.IsNullOrWhiteSpace(input) || input == " "))
+                        inputIsValid = true;
+                    if (i == 1 && int.TryParse(input, out unit) && unit > 0 && unit < 6)
+                            inputIsValid = true;
+                    if (i == 2 && int.TryParse(input, out score) && score >= 0 && score <= 100)
+                        inputIsValid = true;
+
+                    if(!inputIsValid)
+                        goto jumpBack;
+
+                
+
                 allInput.Add(input);
             }
             Console.Clear();
