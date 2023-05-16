@@ -87,7 +87,7 @@ namespace WeekOne
                     int unit = 0;
                     int score = 0;
 
-                    if (i == 0 && (string.IsNullOrEmpty(input) || string.IsNullOrWhiteSpace(input) || input == " "))
+                    if (i == 0 && (!string.IsNullOrEmpty(input) || !string.IsNullOrWhiteSpace(input) || input == " "))
                         inputIsValid = true;
                     if (i == 1 && int.TryParse(input, out unit) && unit > 0 && unit < 6)
                             inputIsValid = true;
